@@ -4,7 +4,7 @@ Bienvenido al repositorio oficial del proyecto **Business Analytics Pro**, una i
 
 ## 🌐 Sitio Web
 
-Accede a la página aquí: [Business Analytics Pro](https://tusitio.com)  
+Accede a la página aquí: [Business Analytics Pro](https://angeltroncoso.github.io/business_analytics_pro/powerbi.html)  
 *(Reemplaza con tu URL real o de GitHub Pages si aplicas)*
 
 ## 🧠 ¿Qué ofrece esta página?
