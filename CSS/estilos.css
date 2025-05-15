@@ -1,95 +1,223 @@
-/* estilos.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Tipografía profesional y limpia */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+:root {
+  --azul-analitico: #1e2a78;
+  --cyan-datos: #00bcd4;
+  --gris-suave: #f5f6fa;
+  --oscuro: #0f172a;
+  --claro: #ffffff;
+  --fuente-principal: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--gris-suave);
+  margin: 0;
+  padding: 0;
+  color: var(--oscuro);
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+#navbar .navbar {
+  background: linear-gradient(90deg, var(--azul-analitico), var(--cyan-datos));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#navbar .navbar-brand,
+#navbar .nav-link {
+  color: var(--claro) !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#navbar .nav-link:hover {
+  color: #d1f2f9 !important;
+}
+
+#navbar .form-control {
+  border-radius: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#navbar .btn {
+  border-radius: 30px;
+}
+
+/* SECCIONES */
+section {
+  padding: 80px 120px;
+}
+
+#hero {
+  background: radial-gradient(circle at center, #e0f7fa, #ffffff);
+  text-align: center;
+  animation: fadeInDown 1s ease-out;
+}
+
+#hero h2 {
+  font-size: 2.8rem;
+  color: var(--azul-analitico);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #444;
+}
+
+section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--azul-analitico);
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Íconos centrados y animados */
+section h3::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 60px;
+  background: var(--cyan-datos);
+  margin: 0 auto 10px auto;
+  border-radius: 2px;
+  animation: growBar 1.5s ease-in-out forwards;
+}
+
+/* HOVER y ANIMACIONES */
+.hover-zoom {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.hover-zoom:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--azul-analitico);
+  color: var(--claro);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* ANIMACIONES PERSONALIZADAS */
+@keyframes growBar {
+  from {
+    width: 0;
+    opacity: 0;
   }
-  
-  body {
-    background: linear-gradient(to right, #e0f7fa, #fce4ec);
-    color: #2e2e2e;
-    line-height: 1.6;
+  to {
+    width: 60px;
+    opacity: 1;
   }
-  
-  header {
-    background-color: #512da8;
-    color: white;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  header h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-  
-  nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: #ffe082;
-  }
-  
-  #hero {
-    background-color: #ffecb3;
-    text-align: center;
-    padding: 3rem 1rem;
-    color: #37474f;
-  }
-  
-  #hero h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  section {
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
-    background-color: #ffffffaa;
-    margin-top: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  }
-  
-  section h3 {
-    font-size: 1.5rem;
-    color: #6a1b9a;
-    margin-bottom: 0.5rem;
-  }
-  
-  footer {
-    background-color: #212121;
-    color: #eeeeee;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .galeria-powerbi {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem 0;
-  }
-  
-  .galeria-powerbi iframe {
-    width: 100%;
-    height: 350px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
+}
+/* Estilo general de la página Power BI */
+body.powerbi-theme {
+  background-color: #0d1117;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #161b22;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #facc15;
+}
+
+header h1 {
+  color: #facc15;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #facc15;
+}
+
+/* Introductorio */
+.intro {
+  padding: 2rem;
+  background-color: #1e2530;
+  border-left: 5px solid #facc15;
+  margin: 2rem;
+  border-radius: 10px;
+}
+
+.intro h2 {
+  color: #facc15;
+}
+
+/* Dashboards */
+.dashboards {
+  padding: 2rem;
+}
+
+.dashboards h2 {
+  color: #facc15;
+}
+
+.galeria-powerbi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.galeria-powerbi iframe {
+  width: 100%;
+  height: 300px;
+  border: 2px solid #2ea44f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.galeria-powerbi iframe:hover {
+  transform: scale(1.02);
+  border-color: #facc15;
+}
+
+/* Footer */
+footer {
+  background-color: #161b22;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #2ea44f;
+}
