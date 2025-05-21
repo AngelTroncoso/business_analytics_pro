@@ -227,13 +227,18 @@ footer {
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
 }
 
 .proyecto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex: 1 1 300px; /* Que crezca pero tenga mínimo 300px de ancho */
+  max-width: 300px;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1rem;
-  width: 300px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -243,3 +248,35 @@ footer {
   color: #007bff;
   font-weight: bold;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #24292e;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-top: auto;
+  align-self: center;
+}
+
+.github-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+}
+
