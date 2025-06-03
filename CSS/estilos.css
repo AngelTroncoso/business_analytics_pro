@@ -109,13 +109,16 @@ section h3::before {
 
 /* FOOTER */
 footer {
-  background-color: var(--azul-analitico);
-  color: var(--claro);
+  background-color: #161b22; /* prevalece sobre var(--azul-analitico) */
+  color: #ccc;               /* prevalece sobre var(--claro) */
   text-align: center;
-  padding: 20px 0;
+  padding: 3rem 1rem;        /* agrandado */
   font-size: 0.95rem;
   letter-spacing: 0.5px;
+  border-top: 2px solid #2ea44f;
+  z-index: 10; 
 }
+
 
 /* ANIMACIONES PERSONALIZADAS */
 @keyframes growBar {
@@ -213,15 +216,6 @@ nav a:hover {
   border-color: #facc15;
 }
 
-/* Footer */
-footer {
-  background-color: #161b22;
-  color: #ccc;
-  text-align: center;
-  padding: 1rem;
-  border-top: 2px solid #2ea44f;
-}
-
 .proyectos-container {
   display: flex;
   gap: 1rem;
@@ -280,3 +274,17 @@ footer {
   height: 20px;
 }
 
+/* Estilos específicos para los iconos y sus enlaces */
+footer .d-flex a i {
+  font-size: 2.5rem;         /* iconos más grandes */
+  transition: color 0.3s ease;
+}
+
+footer .d-flex a {
+  margin: 0 1rem;            /* más espacio entre iconos */
+}
+
+footer .d-flex a:hover i {
+  color: #facc15;            /* color amarillo al pasar el mouse */
+  cursor: pointer;
+}
