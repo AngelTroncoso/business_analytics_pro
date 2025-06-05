@@ -327,3 +327,21 @@ footer .d-flex a:hover i {
   width: 160px;
 }
 
+.proyectos-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.proyecto-card {
+  width: calc(25% - 20px); /* 10px de margen a cada lado */
+  margin: 10px;
+  box-sizing: border-box;
+}
+/* Puedes mantener algunos estilos personalizados si las clases de Bootstrap no cubren todo */
+
+
+.github-icon {
+  width: 20px; /* O el tamaño que prefieras */
+  height: 20px;
+  margin-right: 5px; /* Espacio entre el icono y el texto del botón */
+}
+
