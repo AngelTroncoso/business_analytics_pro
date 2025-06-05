@@ -21,33 +21,62 @@
 <body style="font-family: 'Inter', sans-serif;">
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#"> Business Analytics Pro</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm w-100">
+    <div class="d-flex justify-content-between align-items-center w-100 px-3">
+      <a class="navbar-brand fw-bold" href="#">Business Analytics Pro</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link active" href="powerbi.html">Power BI</a></li>
             <li class="nav-item"><a class="nav-link" href="analisis.html">Análisis de Datos</a></li>
             <li class="nav-item"><a class="nav-link" href="ia.html">IA Inteligente</a></li>
           </ul>
-          <form class="d-flex" role="search">
+
+          <form class="d-flex me-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
             <button class="btn btn-outline-light" type="submit">Buscar</button>
           </form>
+
         </div>
       </div>
     </nav>
   </header>
 
-  <section id="hero" class="text-center text-white d-flex flex-column justify-content-center align-items-center" style="height: 100vh; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
-    <div class="container">
-      <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">Impulsa tus decisiones con datos inteligentes</h1>
-      <p class="lead animate__animated animate__fadeInUp">Transformamos datos en estrategias con Power BI, análisis profundo e inteligencia artificial de última generación.</p>
-    </div>
-  </section>
+  <section id="hero" class="position-relative text-center text-white d-flex flex-column justify-content-center align-items-center" style="height: 100vh; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+  <!-- Navbar flotante superior derecha -->
+  <div class="position-absolute top-0 end-0 p-3">
+    <nav class="navbar navbar-dark">
+    </nav>
+  </div>
+
+  <!-- Contenido central -->
+  <div class="container">
+    <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">
+      Impulsa tus decisiones con datos inteligentes
+    </h1>
+    <p class="lead animate__animated animate__fadeInUp">
+      Transformamos datos en estrategias con Power BI, análisis profundo e inteligencia artificial de última generación.
+    </p>
+  </div>
+</section>
+
+<!-- NUEVAS SECCIONES A INSERTAR JUSTO ANTES DEL FOOTER -->
+    <section id="sobre-mi" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">👨‍💼 Acerca de mí</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <p class="text-center lead">
+              Soy Ángel Troncoso, apasionado del análisis de datos, programación y estrategias basadas en inteligencia artificial. Me especializo en transformar desafíos complejos en soluciones prácticas para empresas modernas. Siempre estoy aprendiendo y llevando los proyectos más allá de lo esperado 🚀.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="divisor-elegante mx-auto mb-4">
 
   <section class="py-5 bg-light">
     <div class="container">
@@ -79,6 +108,7 @@
       </div>
     </div>
   </section>
+
 
   <footer class="bg-dark text-white text-center py-4">
      <p class="mb-2">&copy;<strong> 2025 Business Analytics Pro. Datos con propósito.</strong></p>
