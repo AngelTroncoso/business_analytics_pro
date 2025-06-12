@@ -344,7 +344,6 @@ nav a:hover {
     flex-direction: column;
     gap: 1rem;
   }
-}
 
 .galeria-powerbi {
   display: grid;
@@ -442,7 +441,7 @@ main {
 }
 
 .card {
-  height: 900px; /* Ajusta este valor según necesites */
+  height: 100%; /* Ajusta este valor según necesites */
   display: flex;
   flex-direction: column;
   justify-content: center;
