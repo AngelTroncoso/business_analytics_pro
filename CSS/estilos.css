@@ -439,18 +439,6 @@ main {
   min-height: 500px;
 }
 
-.card {
-  height: 100%; /* Ajusta este valor según necesites */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto; /* Centra la tarjeta verticalmente */
-  padding: 20px; /* Agrega un poco de espacio interno */
-  position: relative; /* Agrega posición relativa */
-  top: 50%; /* Mueve la tarjeta hacia abajo un 50% */
-  transform: translateY(-50%); /* Ajusta la posición para que quede centrada */
-}
-
 /* 🔁 Responsive: Ajusta altura en pantallas pequeñas */
 @media (max-width: 768px) {
   .custom-carousel-height,
@@ -469,13 +457,7 @@ main {
     min-height: 250px; /* Aún más compacto en teléfonos chicos */
   }
 
-  .card h3 {
-    font-size: 1.1rem;
-  }
 
-  .card p {
-    font-size: 0.95rem;
-  }
 }
 .carousel-item .card {
   width: 100%;
@@ -495,25 +477,4 @@ main {
     box-shadow: none;
     z-index: 1;
   }
-}
-.carousel {
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .carousel {
-    width: 100%;
-    height: auto;
-  }
-  .carousel-item .card {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-.container {
-  width: 100%;
-  max-width: 1200px; /* ajusta este valor según necesites */
-  margin: 0 auto;
-}
-.dashboards .card {
-  margin-bottom: 2rem;
 }
