@@ -514,3 +514,6 @@ main {
   max-width: 1200px; /* ajusta este valor según necesites */
   margin: 0 auto;
 }
+.dashboards .card {
+  margin-bottom: 2rem;
+}
