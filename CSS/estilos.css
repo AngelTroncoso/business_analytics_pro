@@ -124,7 +124,7 @@ footer .d-flex a:hover i {
 }
 
 .hover-zoom:hover {
-  transform: translateY(-6px) scale(1.04);
+  transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -385,7 +385,7 @@ nav a:hover {
 
 @keyframes pulse-animation {
   0% {
-    box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.34);
+    box-shadow: 0 0 0 0px rgba(37, 211, 102, 0.34); /* #25d36657 */
   }
   100% {
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
@@ -393,9 +393,83 @@ nav a:hover {
 }
 
 @keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(5px); }
-  50% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(5px); }
+  50%  { transform: translateX(-5px); }
+  75%  { transform: translateX(5px); }
   100% { transform: translateX(0); }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.custom-carousel-height {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.card {
+  height: 900px; /* Ajusta este valor según necesites */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto; /* Centra la tarjeta verticalmente */
+  padding: 20px; /* Agrega un poco de espacio interno */
+  position: relative; /* Agrega posición relativa */
+  top: 50%; /* Mueve la tarjeta hacia abajo un 50% */
+  transform: translateY(-50%); /* Ajusta la posición para que quede centrada */
+}
+
+/* 🔁 Responsive: Ajusta altura en pantallas pequeñas */
+@media (max-width: 768px) {
+  .custom-carousel-height,
+  .carousel-item {
+    min-height: 300px; /* Más compacto en celulares */
+  }
+
+  .card {
+    padding: 1rem; /* Reduce el padding en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-carousel-height,
+  .carousel-item {
+    min-height: 250px; /* Aún más compacto en teléfonos chicos */
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
+.carousel-item .card {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.carousel-item.active .card {
+  transform: scale(1.05); /* Efecto de agrandado */
 }
