@@ -510,3 +510,8 @@ main {
     max-width: 100%;
   }
 }
+.container {
+  width: 100%;
+  max-width: 1200px; /* ajusta este valor según necesites */
+  margin: 0 auto;
+}
