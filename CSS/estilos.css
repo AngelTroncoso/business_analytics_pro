@@ -497,3 +497,16 @@ main {
     z-index: 1;
   }
 }
+.carousel {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .carousel {
+    width: 100%;
+    height: auto;
+  }
+  .carousel-item .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
