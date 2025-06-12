@@ -473,3 +473,11 @@ main {
 .carousel-item.active .card {
   transform: scale(1.05); /* Efecto de agrandado */
 }
+
+@media (max-width: 768px) {
+  .proyecto-card:hover {
+    transform: none;
+    box-shadow: none;
+    z-index: 1;
+  }
+}
