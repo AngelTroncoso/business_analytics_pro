@@ -429,36 +429,20 @@ main {
 .custom-carousel-height {
   min-height: 500px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+  padding: 0;
+  overflow-y: hidden; /* Agregado para evitar desbordamiento */
 }
 
 .carousel-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 500px;
+  height: 100%;
 }
 
-/* 🔁 Responsive: Ajusta altura en pantallas pequeñas */
-@media (max-width: 768px) {
-  .custom-carousel-height,
-  .carousel-item {
-    min-height: 300px; /* Más compacto en celulares */
-  }
-
-  .card {
-    padding: 1rem; /* Reduce el padding en móviles */
-  }
-}
-
-@media (max-width: 480px) {
-  .custom-carousel-height,
-  .carousel-item {
-    min-height: 250px; /* Aún más compacto en teléfonos chicos */
-  }
-
-
-}
 .carousel-item .card {
   width: 100%;
   max-width: 800px;
@@ -468,13 +452,24 @@ main {
 }
 
 .carousel-item.active .card {
-  transform: scale(1.05); /* Efecto de agrandado */
+  transform: scale(1.05);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .proyecto-card:hover {
-    transform: none;
-    box-shadow: none;
-    z-index: 1;
+  .custom-carousel-height,
+  .carousel-item {
+    min-height: 300px;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-carousel-height,
+  .carousel-item {
+    min-height: 250px;
   }
 }
