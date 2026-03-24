@@ -37,6 +37,7 @@ body.powerbi-theme {
 
 .powerbi-theme .card-title {
     color: #facc15;
+    font-weight: 800;
 }
 
 .powerbi-theme a.text-dark {
@@ -61,14 +62,17 @@ header {
   background-color: #161b22;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   border-bottom: 2px solid #facc15;
+  gap: 1rem;
 }
 
 header h1 {
   color: #facc15;
   margin: 0;
+  font-weight: 800;
 }
 
 nav ul {
@@ -91,19 +95,21 @@ nav a:hover {
 
 /* Sections */
 section {
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .intro {
-  padding: 2rem;
+  padding: 1rem;
   background-color: #1e2530;
   border-left: 5px solid #facc15;
-  margin: 2rem;
+  margin: 1rem;
   border-radius: 10px;
 }
 
 .intro h2 {
   color: #facc15;
+  font-weight: 800;
+  text-align: center;
 }
 
 /* Carousel */
@@ -134,6 +140,8 @@ section {
 .proyecto-card h3 {
   color: #facc15;
   font-size: 1.25rem;
+  font-weight: 800;
+  text-align: center;
 }
 
 .proyecto-card p {
