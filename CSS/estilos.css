@@ -586,10 +586,12 @@ footer {
   border: 1px solid rgba(59, 243, 255, 0.14);
   border-radius: 30px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
+  text-align: center;
 }
 
 .cta-section .section-title {
   margin-bottom: 1.5rem;
+  justify-content: center;
 }
 
 .cta-section p {
