@@ -598,6 +598,18 @@ footer {
   line-height: 1.75;
 }
 
+.cta-illustration {
+  margin: 0 auto 1.5rem;
+  max-width: 960px;
+  width: 100%;
+}
+
+.cta-illustration svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .cta-actions {
   display: flex;
   gap: 1rem;
